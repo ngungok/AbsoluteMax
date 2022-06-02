@@ -7,17 +7,19 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class AbsoluteMaxTest {
 
-    @Test
-    void testGetMaxValue() {
-        assertEquals(16, AbsoluteMax.getMaxValue(-2, 0, 16));
-        assertEquals(-10, AbsoluteMax.getMaxValue(3, -10, -2));
-    }
+
     
     @Test
     void testGetMaxValue() {
         assertEquals(6, AbsoluteMax.getMaxValue(-1 , 1, 6));
         assertEquals(31, AbsoluteMax.getMaxValue(31, -120, -12));
     }
+        @Test
+    void testGetMaxValue() {
+        assertEquals(63, AbsoluteMax.getMaxValue(-14 , 12, 63));
+        assertEquals(312, AbsoluteMax.getMaxValue(312, -4120, -142));
+    }
+    
     
     @Test
     void testGetMaxValueWithNoArguments() {
